@@ -1,11 +1,12 @@
-
-type User = {
-    name: string,
+class User {
     email: string
+    name: string
+    country: string = "Nepal"
+    constructor(email: string, name: string) {
+        this.email = email,
+            this.name = name
+    }
 }
 
-let u: User = {name:"Dan",email:"aawdaw"}
-u.email="JJSTARR"
-
-console.log("TypeScript 5555")
-console.log(u);
+const me = new User("Pra@gmail.com", "DDD")
+me.country = "India"

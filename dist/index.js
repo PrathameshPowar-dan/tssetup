@@ -1,6 +1,14 @@
-let u = { name: "Dan", email: "aawdaw" };
-u.email = "JJSTARR";
-console.log("TypeScript 5555");
-console.log(u);
+class User {
+    email;
+    name;
+    country = "Nepal";
+    constructor(email, name) {
+        this.email = email,
+            this.name = name;
+    }
+}
+const me = new User("Pra@gmail.com", "DDD");
+me.country = "India";
+console.log(me)
 export {};
 //# sourceMappingURL=index.js.map
