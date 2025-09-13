@@ -146,3 +146,29 @@ const Gennn = <T>(p: T[]): T | undefined => {
 
 console.log("Gen ",Gennn(R))
 
+function I9<T,U>(ValT: T,ValU: U):object{
+    return {
+        ValT,
+        ValU
+    }
+}
+
+
+interface Q{
+    question:string,
+    answer:string
+}
+
+interface C{
+    name:string,
+    owner:string,
+    subject:string
+}
+
+
+class Sellabe<T>{
+    public cart: T[]=[]
+    AddCart(pro: T){
+        this.cart.push(pro)
+    }
+}
