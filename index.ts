@@ -88,18 +88,18 @@ abstract class Photo {
 
 class Instagram extends Photo {
     see(): void {
-        // console.log("Viewing photo on Instagram");
+        console.log("Viewing photo on Instagram");
     }
 
     ss(): void {
-        // console.log("Taking screenshot...");
+        console.log("Taking screenshot...");
     }
 }
 
 
 const insta = new Instagram("Sony", "Vintage", 3);
 insta.see();            // "Viewing photo on Instagram"
-// console.log(insta.getReel(5)); 
+console.log(insta.getReel(5)); 
 
 
 const score: Array<number> = []
@@ -124,16 +124,15 @@ function i4<T>(v: T): T {
     return v;
 }
 
-// i4(R)
+i4(R)
 
 interface Boot {
     name: string
     price: number
 }
 
-// i3<Boot>({})
 function i5<T>(v: T[]): T[] {
-    // console.log(v.length)
+    console.log(v.length)
     return v;
 }
 
@@ -172,3 +171,98 @@ class Sellabe<T>{
         this.cart.push(pro)
     }
 }
+
+function ttt(typ: number | string) {
+    if (typeof typ === "number") {
+        return typ;
+    }
+    return typ.toLocaleLowerCase();
+}
+
+function ID(i: string | null) {
+    if (!i) {
+        console.log("Please provide a ID")
+    }
+    return i?.toLocaleLowerCase();
+}
+
+interface Userrr {
+    name: string,
+    email: string
+}
+
+interface Adminnn {
+    name: string,
+    email: string,
+    admin: boolean
+}
+
+function isAdmin(p: Userrr | Adminnn) {
+    if ("admin" in p) {
+        return p.admin;
+    }
+    return p;
+}
+
+function logValue(x: Date | string) {
+    if (x instanceof Date) {
+        console.log(x.toUTCString());
+
+
+    } else {
+        console.log(x.toUpperCase());
+
+    }
+}
+
+type Fish = { swim: () => {} }
+type Bird = { fly: () => {} }
+
+function isFish(val: Fish | Bird): val is Fish {
+    return (val as Fish).swim !== undefined
+}
+
+function Food(val: Fish | Bird) {
+    if (isFish(val)) {
+        val
+        return "Fish Food"
+    } else {
+        val
+        return "Bird Food"
+    }
+}
+
+
+interface Round {
+    kind: "cirle",
+    radius: number
+}
+
+interface Box {
+    kind: "square",
+    side: number
+}
+
+interface Rec {
+    kind: "rectangle",
+    length: number,
+    width: number
+}
+
+type Shape = Round | Box | Rec
+
+function Shapes(v: Shape) {
+    switch (v.kind) {
+        case "cirle":
+            return Math.PI ** 2
+        case "square":
+            return v.side * v.side
+        case "rectangle":
+            return v.length * v.width
+        default:
+            const defaultshape: never = v
+            return defaultshape
+    }
+}
+
+export { };
