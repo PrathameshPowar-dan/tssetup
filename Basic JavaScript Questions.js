@@ -1,10 +1,10 @@
-Q1 Reserse a String
+// Q1 Reserse a String
 let name  = "Hello"
 console.log(name.split("").reverse().join(""))
 
 
 
-Q2 Check if Prime
+// Q2 Check if Prime
 const n = 18
 function CheckPrime(p) {
     if (p <= 1) return false;
@@ -23,8 +23,8 @@ function CheckPrime(p) {
 console.log(CheckPrime(n))
 
 
-Q3 Find the factorial
-const n = 5
+// Q3 Find the factorial
+const nn = 5
 function Fac(p) {
     let New = 1;
     for (let i = p; i > 1; i--) {
@@ -36,17 +36,17 @@ function Fac(p) {
     }
     return New;
 }
-console.log(Fac(n))
+console.log(Fac(nn))
 
 
-Q4 Swap Variables
+// Q4 Swap Variables
 let a = 5;
 let b = 10;
 [a, b] = [b, a];
 console.log(a, b);
 
 
-Q5 Check if a string is a palindrome
+// Q5 Check if a string is a palindrome
 const namee = "Swaddaws"
 
 function CheckPalindrome(str) {
