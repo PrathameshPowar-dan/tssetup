@@ -70,5 +70,26 @@ function findMissing(arr) {
   return expectedSum - actualSum;
 }
 
-console.log(findMissing(miss));
+// console.log(findMissing(miss));
 
+// Q5. Group objects by a property
+
+const grp = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 30 }
+];
+
+function groupByAge(arr) {
+  const result = {};
+  for (const obj of arr) {
+    const key = obj.age;
+    if (!result[key]) {
+      result[key] = [];
+    }
+    result[key].push(obj);
+  }
+  return result;
+}
+
+// console.log(groupByAge(grp));
