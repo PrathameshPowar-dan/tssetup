@@ -15,30 +15,60 @@ function Large(p) {
 
 
 // Q2. Remove duplicates from an array
-const arr = [3,1,2,3,3]
+const arr = [3, 1, 2, 3, 3]
 
 function CheckDupe(p) {
     const New = [];
     for (let i = 0; i < p.length; i++) {
         if (New.includes(p[i])) {
             continue;
-        } else{
+        } else {
             New.push(p[i])
         }
     }
     return New;
 }
 
-console.log(CheckDupe(arr))
+// console.log(CheckDupe(arr))
 
 // OR
 
 function removeDuplicates(arr) {
-  return [...new Set(arr)];
+    return [...new Set(arr)];
 }
 
-console.log(removeDuplicates(arr));
+// console.log(removeDuplicates(arr));
 
 
 // Q3. Flatten a nested array
+const arrr = [1, 2, [3, 4]]
+
+function FlatNest(arr) {
+    const Nw = [];
+    for (const e of arr) {
+        if (Array.isArray(e)) {
+            for (const inner of e) {
+                Nw.push(inner);
+            }
+        } else {
+            Nw.push(e);
+        }
+    }
+    return Nw;
+}
+
+// console.log(FlatNest(arrr)); 
+
+
+// Q4. Find the missing number in an array of 1…n
+const miss = [1, 2, 4, 5];
+
+function findMissing(arr) {
+  const n = arr.length + 1;
+  const expectedSum = (n * (n + 1)) / 2;
+  const actualSum = arr.reduce((a, b) => a + b, 0);
+  return expectedSum - actualSum;
+}
+
+console.log(findMissing(miss));
 
