@@ -72,8 +72,8 @@ function findMissing(arr) {
 
 // console.log(findMissing(miss));
 
-// Q5. Group objects by a property
 
+// Q5. Group objects by a property
 const grp = [
   { name: "Alice", age: 25 },
   { name: "Bob", age: 25 },
