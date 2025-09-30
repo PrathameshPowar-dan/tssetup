@@ -38,4 +38,3 @@ function CapThem(a) {
 }
 
 // console.log(CapThem(Wo))
-
