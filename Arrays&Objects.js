@@ -92,4 +92,4 @@ function groupByAge(arr) {
   return result;
 }
 
-// console.log(groupByAge(grp));
+console.log(groupByAge(grp));
