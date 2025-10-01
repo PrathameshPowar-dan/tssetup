@@ -1,0 +1,51 @@
+// Q.1 Implement debounce functions
+function debounce(fn, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer); // reset timer if called again
+    timer = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}
+
+// Example usage
+const log = debounce(() => console.log("Hello from debounce!"), 2000);
+
+// log();
+// log();
+// log(); // Only this one runs after 2s
+
+
+// Q.2 Implement throttle functions
+function throttle(fn, limit) {
+  let inThrottle = false;
+
+  return function (...args) {
+    if (!inThrottle) {
+      fn.apply(this, args);   // Run immediately
+      inThrottle = true;      // Block future calls
+      setTimeout(() => {
+        inThrottle = false;   // Reopen gate after "limit"
+      }, limit);
+    }
+  };
+}
+
+// Example usage
+const log2 = throttle(() => console.log("Hello from throttle!"), 2000);
+
+// log2();
+// log2();
+// log2(); // Only first runs immediately, others ignored until 2s pass
+
+
+// Q.3 Write a function that returns a function (closure)
+function Saty(name) {
+    return function () {
+        console.log("Hello", name)
+    }
+}
+
+const greet = Saty("Jade")
+// greet()

@@ -53,4 +53,4 @@ function CheckRepeat(str) {
     return null;
 }
 
-console.log(CheckRepeat(nnn))
+// console.log(CheckRepeat(nnn))
