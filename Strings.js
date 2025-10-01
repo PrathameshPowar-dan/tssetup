@@ -44,15 +44,13 @@ function CapThem(a) {
 
 const nnn = "aabcc";
 
-function CheckRepeat(a) {
-    const split = a.split("");
-    let b =""
-    for (let i = 0; i < split.length; i++) {
-        if (a[i]==a[i+1]) {
-            b+=a[i]
+function CheckRepeat(str) {
+    for (let i = 0; i < str.length; i++) {
+        if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
+            return str[i];
         }
     }
-    return b;
+    return null;
 }
 
 console.log(CheckRepeat(nnn))

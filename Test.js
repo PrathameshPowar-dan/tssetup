@@ -91,8 +91,8 @@ function DupesUnique(a) {
 }
 
 // let a = [1, 2, 2, 2, 3, 4, 4, 5];
-let at = [1, 2, 2, 3, 33, 44, 4,4, 5, 6, 7, 8, 7, 8]
-console.log(DupesUnique(at)); // [2, 4]
+let at = [2,1, 2, 2, 3, 33, 44, 4,4, 5, 6, 7, 8, 7, 8]
+console.log("Unique",DupesUnique(at)); // [2, 4]
 
 
 let aa = "Harry";
@@ -108,7 +108,7 @@ let a = "Mysh Namesh ish Prathamesh ";
 function Name(a){
     if(a.includes("sh") == true){
         console.log("Present")
-        console.log(a.indexOf(" "))
+        // console.log(a.indexOf(" "))
     } else{
         console.log("Not Present")
     }
@@ -123,7 +123,7 @@ function count(a) {
         let temp = "";
         for (let j = i; j < a.length; j++) {
             temp += a.charAt(j)
-            console.log(temp)
+            // console.log(temp)
             if (temp == sub) {
                 count++;
             }
@@ -140,8 +140,8 @@ const s3 = s2 && s1
 
 console.log(s3)
 
-[a]=[2100,300,400]
-console.log(a) //2100
+// [a]=[2100,300,400]
+// console.log(a) //2100
 
 
 let T =100
