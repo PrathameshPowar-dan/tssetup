@@ -38,3 +38,21 @@ function CapThem(a) {
 }
 
 // console.log(CapThem(Wo))
+
+
+// Q.4 Find the first non-repeating character in a string
+
+const nnn = "aabcc";
+
+function CheckRepeat(a) {
+    const split = a.split("");
+    let b =""
+    for (let i = 0; i < split.length; i++) {
+        if (a[i]==a[i+1]) {
+            b+=a[i]
+        }
+    }
+    return b;
+}
+
+console.log(CheckRepeat(nnn))
