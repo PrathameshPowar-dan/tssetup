@@ -49,3 +49,54 @@ function Saty(name) {
 
 const greet = Saty("Jade")
 // greet()
+
+// Q.4 Currying example
+function add(a) {
+  return function (b) {
+    return function (c) {
+      if (a == null || b == null || c == null) {
+        return "Put numbers";
+      } else {
+        return a + b + c;
+      }
+    }
+  }
+}
+
+const add1 = add(1)
+
+// console.log(add1(1)(3))
+
+// Q.5 Implement your own bind function
+const person = {
+  name: "Alice",
+};
+
+function sayHello(greeting) {
+  console.log(`${greeting}, my name is ${this.name}`);
+}
+
+const boundHello = sayHello.bind(person, "Hi"); // bind ensures this inside sayHello always refers to person.
+
+boundHello(); // "Hi, my name is Alice"
+
+
+
+
+// Q.6 Implement map
+
+Array.prototype.myMap = function (callback) {
+  const result = [];
+  for (let i = 0; i < this.length; i++) {
+    result.push(callback(this[i], i, this));
+  }
+  return result;
+};
+
+// ✅ Example
+const arr = [1, 2, 3];
+const doubled = arr.myMap(x => x * 2);
+
+console.log(doubled); // [2, 4, 6]
+
+
